@@ -1,8 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Wppost from './components/Wppost';
+//import axios from 'axios';
 
-function App() {
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+   state = {
+    title: "sdddd",
+    date: "",
+    content: {}
+  };
+
+
+
+render() {
+ 
   return (
     <div className="App">
       <header className="App-header">
@@ -19,8 +37,14 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <Wppost mypost={this.state.title}/>
+      
     </div>
-  );
+  )
+   
+}
+
 }
 
 export default App;
